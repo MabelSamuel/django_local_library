@@ -44,3 +44,10 @@ class BookDetailView(generic.DetailView):
 
   return render(request, 'catalog/book_detail.html', context={'book': book})
   """
+
+class AuthorListView(generic.ListView):
+    model = Author
+    paginate_by = 10
+
+class AuthorDetailView(generic.DetailView):
+    model = Author
